@@ -1,0 +1,36 @@
+=======================================================================
+           UNIVERSIDAD TECNOLÓGICA DEL CENTRO DE VERACRUZ
+=======================================================================
+              ROLES Y RESPONSABILIDADES DEL EQUIPO
+=======================================================================
+
+Proyecto Base: RetiScan
+Repositorio: HerramientasdeGestion
+Asignatura: ADMINISTRACIÓN DE PROYECTOS DE TI
+Docente: MIEVEA. Rolando Rodriguez Vazquez
+Grupo: 9B IDGS
+
+-----------------------------------------------------------------------
+ESTRUCTURA ORGANIZACIONAL DE TRABAJO (PAREJA DE DESARROLLO)
+-----------------------------------------------------------------------
+Para la correcta administración del repositorio colaborativo y asegurar la
+calidad en los entregables solicitados en este parcial, se establece la
+siguiente matriz de responsabilidades funcionales:
+
+1. INTEGRANTE: Rosas Espinosa Alfredo
+   ROL: DevOps Engineer & Frontend Lead
+   RESPONSABILIDADES:
+   - Diseñar, estructurar y mantener el flujo de integración en GitHub.
+   - Configurar, optimizar y testear los entornos aislados en Docker.
+   - Programar los módulos de interfaz gráfica en Flutter para la Web PWA.
+   - Actuar como el encargado principal de revisar, auditar y aplicar el
+     Merge definitivo a los Pull Requests hacia la rama principal (main).
+
+2. INTEGRANTE: Andrade Amezcua Angel Gabriel
+   ROL: Backend & AI Engineer
+   RESPONSABILIDADES:
+   - Diseñar y codificar la arquitectura de la API RESTful (Node.js/Express).
+   - Implementar los middlewares de seguridad (Autenticación por tokens JWT).
+   - Diseñar y normalizar las tablas relacionales en la base de datos (PostgreSQL).
+   - Mantener el microservicio en Python/Flask que procesa las imágenes
+     de la retina mediante el modelo de Inteligencia Artificial ResNet-50.

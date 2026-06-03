@@ -1,0 +1,60 @@
+=======================================================================
+           UNIVERSIDAD TECNOLÓGICA DEL CENTRO DE VERACRUZ
+=======================================================================
+                 DIAGRAMA DE FLUJO SIMPLE DEL SISTEMA
+=======================================================================
+
+Proyecto Base: RetiScan
+Repositorio: HerramientasdeGestion
+Asignatura: ADMINISTRACIÓN DE PROYECTOS DE TI
+Docente: MIEVEA. Rolando Rodriguez Vazquez
+Integrantes: 
+* Rosas Espinosa Alfredo
+* Andrade Amezcua Angel Gabriel
+Grupo: 9B IDGS
+
+-----------------------------------------------------------------------
+DESCRIPCIÓN DEL FLUJO LÓGICO
+-----------------------------------------------------------------------
+El siguiente esquema en texto plano representa el recorrido lógico, de
+datos y de seguridad que realiza una solicitud de análisis clínico dentro
+del entorno una vez desplegado:
+
+[ Inicio: Solicitud de Análisis desde el Frontend ]
+                        │
+                        ▼
+            ┌───────────────────────┐
+            │    Validación JWT     │
+            └───────────┬───────────┘
+                        │
+                        ▼
+            ┌───────────────────────┐
+            │ Middleware Suscripción│
+            └───────────┬───────────┘
+                        │
+        ┌───────────────┴───────────────┐
+        │ (¿Suscripción es Válida?)    │
+        ▼ (Sí)                          ▼ (No)
+┌───────────────────────┐      ┌───────────────────┐
+│ Preprocesar Imagen    │      │   Denegar Acceso  │
+└───────────┬───────────┘      │    (Error 403)    │
+            │                  └───────────────────┘
+            ▼
+┌───────────────────────┐
+│   Inferencia de IA    │
+│      (ResNet-50)      │
+└───────────┬───────────┘
+            │
+            ▼
+┌───────────────────────┐
+│ Guardar Historial     │
+│    (PostgreSQL)       │
+└───────────┬───────────┘
+            │
+            ▼
+┌───────────────────────┐
+│ Retornar Resultados   │
+└───────────┬───────────┘
+            │
+            ▼
+         [ Fin ]

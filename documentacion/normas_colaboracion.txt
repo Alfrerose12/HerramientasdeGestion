@@ -1,0 +1,46 @@
+=======================================================================
+           UNIVERSIDAD TECNOLÓGICA DEL CENTRO DE VERACRUZ
+=======================================================================
+              NORMAS BÁSICAS DE TRABAJO COLABORATIVO
+=======================================================================
+
+Proyecto Base: RetiScan
+Repositorio: HerramientasdeGestion
+Asignatura: ADMINISTRACIÓN DE PROYECTOS DE TI
+Docente: MIEVEA. Rolando Rodriguez Vazquez
+Integrantes: 
+* Rosas Espinosa Alfredo
+* Andrade Amezcua Angel Gabriel
+Grupo: 9B IDGS
+
+-----------------------------------------------------------------------
+POLÍTICAS DE GOBERNANZA DEL REPOSITORIO GIT / GITHUB
+-----------------------------------------------------------------------
+Con la finalidad de evitar la pérdida de información, prevenir conflictos
+de código y asegurar una trazabilidad limpia en el repositorio común, 
+ambos integrantes acuerdan cumplir bajo obligatoriedad las siguientes reglas:
+
+Norma 1: Restricción absoluta sobre la rama de producción
+Queda estrictamente prohibido realizar commits (git commit) o cargas
+directas (git push) sobre la rama "main". Todo cambio, documentación o
+ajuste técnico debe nacer en una rama secundaria aislada usando la
+siguiente nomenclatura técnica:
+- feat/nombre-caracteristica   (Para adiciones de código)
+- docs/nombre-manual           (Para manuales, reportes y diagramas)
+- bugfix/nombre-error          (Para parches y solución de fallas)
+
+Norma 2: Mensajes de Commit Semánticos (Conventional Commits)
+Cada actualización guardada en Git debe describir con total transparencia
+el cambio aplicado en minúsculas y bajo un formato descriptivo:
+- Ejemplo válido: `docs: add local installation guide and system roles`
+- Ejemplo inválido: `cambios listos` o `codigo nuevo`
+
+Norma 3: Flujo de Integración mediante Pull Requests (PR)
+Para unificar los cambios de una rama secundaria a "main", el autor debe:
+1. Abrir un Pull Request de manera formal en GitHub.
+2. Asignar al otro compañero como revisor ("Reviewer") obligatorio.
+3. El revisor examinará detalladamente el código o texto en la sección
+   "Files Changed". Si halla errores, aplicará un "Request Changes".
+4. Una vez solventadas las dudas y aprobado el PR, se procederá a realizar
+   el Merge y a eliminar inmediatamente la rama remota obsoleta para
+   limpiar el servidor de GitHub.
